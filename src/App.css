@@ -28,14 +28,13 @@
   max-width: 50%;
 }
 
-.submit-button {
-  margin-left: 20px;
+.filters {
+  display: flex;
+  justify-content: space-between;
 }
 
-.toggle-checkbox {
-  margin-right: 10px;
-  position: relative;
-  top: 5px;
+.submit-button {
+  margin-left: 20px;
 }
 
 @keyframes App-logo-spin {
