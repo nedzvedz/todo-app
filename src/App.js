@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import Card from 'material-ui/Card';
 import VisibleTodos from './containers/visible-todos';
 import AddTodoContainer from './containers/add-todo';
+import Filters from './containers/filters';
 import './App.css';
 
 class App extends Component {
@@ -20,6 +21,7 @@ class App extends Component {
         <div className="App-content">
           <Card className="App-card">
             <AddTodoContainer />
+            <Filters />
             <VisibleTodos />
           </Card>
         </div>

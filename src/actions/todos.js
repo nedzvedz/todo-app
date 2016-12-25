@@ -4,7 +4,7 @@ export const actionTypes = {
 
 export function addTodo(payload) {
   return {
-    type:actionTypes.ADD_TODO,
+    type: actionTypes.ADD_TODO,
     payload
   }
 }

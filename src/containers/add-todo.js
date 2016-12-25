@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import AddTodo from '../components/add-todo.jsx';
-import { addTodo } from '../actions'
+import { addTodo } from '../actions/todos';
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
