@@ -1,0 +1,18 @@
+import { connect } from 'react-redux';
+import AddTodo from '../components/add-todo.jsx';
+import { addTodo } from '../actions'
+
+const mapDispatchToProps = (dispatch, ownProps) => {
+  return {
+    onAddTodoClick: (text) => {
+      dispatch(addTodo(text));
+    }
+  }
+}
+
+const AddTodoContainer = connect(
+  null,
+  mapDispatchToProps
+)(AddTodo)
+
+export default AddTodoContainer;
