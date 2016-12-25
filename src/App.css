@@ -32,6 +32,12 @@
   margin-left: 20px;
 }
 
+.toggle-checkbox {
+  margin-right: 10px;
+  position: relative;
+  top: 5px;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

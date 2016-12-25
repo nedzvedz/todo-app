@@ -11,6 +11,13 @@ function todos(state = initialTodosState, action) {
         id: nextTodoId++,
         completed: false
       }];
+    case actionTypes.TOGGLE_TODO:
+      return state.map(todo => {
+        if (todo.id === action.payload) {
+          todo.completed = !todo.completed;
+        }
+        return todo;
+      });
     default:
       return state;
   }
