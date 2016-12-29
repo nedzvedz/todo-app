@@ -18,6 +18,8 @@ function todos(state = initialTodosState, action) {
         }
         return todo;
       });
+    case actionTypes.SET_TODOS:
+      return action.payload;
     default:
       return state;
   }
