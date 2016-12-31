@@ -8,7 +8,7 @@ class DB {
   }
 
   addTodo(todoText) {
-    return this._getTodos()
+    return this.getTodos()
       .then(todos => {
         let newId;
         let newTodos;
@@ -40,7 +40,7 @@ class DB {
   }
 
   removeTodo(todo) {
-    return this._getTodos()
+    return this.getTodos()
       .then(todos => {
         const idx = todos.indexOf(todo);
         let newTodos = null;
@@ -59,7 +59,7 @@ class DB {
   }
 
   toggleTodo(id) {
-    return this._getTodos(TODO_KEY)
+    return this.getTodos(TODO_KEY)
       .then(todos => {
         const newTodos = todos.map(t => {
           if (t.id === id) {
@@ -78,7 +78,7 @@ class DB {
   }
 
   updateTodo(todo) {
-    return this._getTodos(TODO_KEY)
+    return this.getTodos(TODO_KEY)
       .then(todos => {
         const newTodos = todos.map(t => {
           if (t.id === todo.id) {
@@ -96,7 +96,7 @@ class DB {
       })
   }
 
-  _getTodos() {
+getTodos() {
     return this.db.getItem(TODO_KEY)
       .catch(err => {
         console.warn(`Error while retriving todos`);

@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import logo from '../../logo.svg';
 import Card from 'material-ui/Card';
-import VisibleTodos from './containers/visible-todos';
-import AddTodoContainer from './containers/add-todo';
-import Filters from './containers/filters';
+import VisibleTodos from '../../containers/visible-todos';
+import AddTodoContainer from '../../containers/add-todo';
+import Filters from '../../containers/filters';
 import './App.css';
 
 class App extends Component {
+  componentDidMount() {
+    this.props.onAppInit();
+  }
 
   render() {
     return (
