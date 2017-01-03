@@ -7,7 +7,12 @@ const mapDispatchToProps = (dispatch) => {
   return {
     onAppInit: () => {
       db.getTodos()
-        .then(todos => dispatch(setTodos(todos)));
+        .then(todos => {
+          if (!todos) {
+            todos = [];
+          }
+          dispatch(setTodos(todos))
+        });
     }
   }
 }
