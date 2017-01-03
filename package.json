@@ -53,12 +53,21 @@
     "react-dom": "^15.4.1",
     "react-redux": "^5.0.1",
     "react-tap-event-plugin": "^2.0.1",
-    "redux": "^3.6.0"
+    "redux": "^3.6.0",
+    "body-parser": "~1.15.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "express": "~4.14.0",
+    "morgan": "~1.7.0",
+    "node-sass-middleware": "0.9.8",
+    "pug": "~2.0.0-beta6",
+    "serve-favicon": "~2.3.0"
   },
   "scripts": {
     "start": "node client/scripts/start.js",
     "build": "node client/scripts/build.js",
-    "test": "node client/scripts/test.js --env=jsdom"
+    "test": "node client/scripts/test.js --env=jsdom",
+    "server": "node server/bin/www"
   },
   "jest": {
     "collectCoverageFrom": [
