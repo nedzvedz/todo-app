@@ -125,16 +125,22 @@ function build(previousSizeMap) {
   webpack(config).run((err, stats) => {
     if (err) {
       printErrors('Failed to compile.', [err]);
+      console.log('err arr');
+      console.log(err);
       process.exit(1);
     }
 
     if (stats.compilation.errors.length) {
       printErrors('Failed to compile.', stats.compilation.errors);
+      console.log('errors');
+      console.log(stats.compilation.errors);
       process.exit(1);
     }
 
     if (process.env.CI && stats.compilation.warnings.length) {
      printErrors('Failed to compile.', stats.compilation.warnings);
+      console.log('warnings');
+      console.log(stats.compilation.warnings);
      process.exit(1);
    }
 
