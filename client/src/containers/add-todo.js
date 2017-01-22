@@ -1,20 +1,18 @@
 import { connect } from 'react-redux';
 import AddTodo from '../components/add-todo.jsx';
-import db from '../services/indexed-db';
-import { setTodos } from '../actions/todos';
+import { addTodo } from '../actions/todos';
 
-const mapDispatchToProps = (dispatch, ownProps) => {
+const mapDispatchToProps = (dispatch) => {
   return {
     onAddTodoClick: (text) => {
-      db.addTodo(text)
-        .then(todos => dispatch(setTodos(todos)));      
+      dispatch(addTodo(text));
     }
   }
-}
+};
 
 const AddTodoContainer = connect(
   null,
   mapDispatchToProps
-)(AddTodo)
+)(AddTodo);
 
 export default AddTodoContainer;

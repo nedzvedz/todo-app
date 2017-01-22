@@ -2,8 +2,8 @@
   "name": "todo-app",
   "version": "0.2.0",
   "private": true,
-  "engines" : {
-    "node" : "6.9.3" 
+  "engines": {
+    "node": "6.9.3"
   },
   "devDependencies": {
     "autoprefixer": "6.5.1",
@@ -50,20 +50,21 @@
     "whatwg-fetch": "1.0.0"
   },
   "dependencies": {
+    "body-parser": "~1.15.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "express": "~4.14.0",
     "localforage": "^1.4.3",
     "material-ui": "^0.16.5",
+    "morgan": "~1.7.0",
+    "node-sass-middleware": "0.9.8",
+    "pug": "~2.0.0-beta6",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-redux": "^5.0.1",
     "react-tap-event-plugin": "^2.0.1",
     "redux": "^3.6.0",
-    "body-parser": "~1.15.2",
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.2.0",
-    "express": "~4.14.0",
-    "morgan": "~1.7.0",
-    "node-sass-middleware": "0.9.8",
-    "pug": "~2.0.0-beta6",
+    "redux-thunk": "^2.2.0",
     "serve-favicon": "~2.3.0"
   },
   "scripts": {

@@ -1,20 +1,32 @@
+import db from '../services/indexed-db';
+
 export const actionTypes = {
-  ADD_TODO: 'ADD_TODO',
-  TOGGLE_TODO: 'TOGGLE_TODO',
   SET_TODOS: 'SET_TODOS'
 };
 
-export function addTodo(payload) {
-  return {
-    type: actionTypes.ADD_TODO,
-    payload
+export function getTodos() {
+  return (dispatch) => {
+    db.getTodos()
+      .then(todos => {
+        if (!todos) {
+          todos = [];
+        }
+        dispatch(setTodos(todos));
+      });
   }
 }
 
-export function toggleTodo(payload) {
-  return {
-    type: actionTypes.TOGGLE_TODO,
-    payload
+export function addTodo(text) {
+  return (dispatch) => {
+    db.addTodo(text)
+      .then(todos => dispatch(setTodos(todos)));
+  }
+}
+
+export function toggleTodo(id) {
+  return (dispatch) => {
+    db.toggleTodo(id)
+      .then(todos => dispatch(setTodos(todos)));
   }
 }
 

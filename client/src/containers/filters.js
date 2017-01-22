@@ -6,7 +6,7 @@ const mapStateToProps = (state) => {
   return {
     activeFilter: state.visibilityFilter
   }
-}
+};
 
 const mapDispatchToProps = (dispatch) => {
   return {
@@ -14,7 +14,7 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(setFilter(filterType));
     }
   }
-}
+};
 
 const Filters = connect(
   mapStateToProps,

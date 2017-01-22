@@ -1,8 +1,7 @@
 import { connect } from 'react-redux';
 import TodoList from '../components/todo-list.jsx';
 import FILTERS from '../constants/visibility-filters';
-import { setTodos } from '../actions/todos';
-import db from '../services/indexed-db';
+import { toggleTodo } from '../actions/todos';
 
 function getVisibleTodos(todos, filter) {
   switch (filter) {
@@ -21,16 +20,15 @@ const mapStateToProps = (state) => {
   return {
     todos: getVisibleTodos(state.todos, state.visibilityFilter)
   }
-}
+};
 
 const mapDispatchToProps = (dispatch) => {
   return {
     onToggleTodo: (id) => {
-      db.toggleTodo(id)
-        .then(todos => dispatch(setTodos(todos)));
+      dispatch(toggleTodo(id));
     }
   }
-}
+};
 
 const VisibleTodos = connect(
   mapStateToProps,
