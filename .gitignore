@@ -17,5 +17,5 @@ yarn-error.log
 .idea
 
 # assets, which are copied after build
-server/public
+server/public/static
 server/views/index.html
