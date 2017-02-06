@@ -1,1 +1,1 @@
-web: npm run build && ./build.sh && node server/bin/www
+web: yarn run build && bash ./build.sh && node server/bin/www
